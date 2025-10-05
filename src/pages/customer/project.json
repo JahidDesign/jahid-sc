@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "A personal portfolio showcasing my skills, services, and projects with modern UI and animations.",
+    "imageUrl": "https://i.ibb.co/3zG8BfM/portfolio.png",
+    "techStack": ["React", "Tailwind CSS", "Framer Motion"],
+    "liveUrl": "https://your-portfolio.vercel.app",
+    "githubUrl": "https://github.com/yourusername/portfolio"
+  },
+  {
+    "title": "Plant Care Tracker",
+    "description": "A MERN stack app to track plant care schedules, reminders, and care tips.",
+    "imageUrl": "https://i.ibb.co/hYNxQ1h/plant-care.png",
+    "techStack": ["MongoDB", "Express", "React", "Node.js", "Firebase Auth"],
+    "liveUrl": "https://plantify.vercel.app",
+    "githubUrl": "https://github.com/yourusername/plantify"
+  },
+  {
+    "title": "Hotel & Tour Booking",
+    "description": "A booking platform with authentication, profile management, and booking history.",
+    "imageUrl": "https://i.ibb.co/4TFKcLm/hotel-tour.png",
+    "techStack": ["React", "Firebase", "Tailwind", "MongoDB"],
+    "liveUrl": "https://travel-booking.vercel.app",
+    "githubUrl": "https://github.com/yourusername/hotel-tour-booking"
+  },
+  {
+    "title": "Life Insurance Management",
+    "description": "Full-stack insurance platform with roles (Admin, Agent, Customer), claims, policies, and payments.",
+    "imageUrl": "https://i.ibb.co/hgT9n6t/insurance.png",
+    "techStack": ["React", "Node.js", "MongoDB", "Firebase Auth", "Stripe"],
+    "liveUrl": "https://insurance-platform.vercel.app",
+    "githubUrl": "https://github.com/yourusername/life-insurance-platform"
+  },
+  {
+    "title": "English~জানালা",
+    "description": "An educational web app for learning English vocabulary and grammar interactively.",
+    "imageUrl": "https://i.ibb.co/8r3VwYJ/english-janala.png",
+    "techStack": ["React", "Tailwind CSS", "Firebase"],
+    "liveUrl": "https://english-janala.vercel.app",
+    "githubUrl": "https://github.com/yourusername/english-janala"
+  },
+  {
+    "title": "E-Commerce Store",
+    "description": "A modern e-commerce platform with product filters, cart, payments, and order tracking.",
+    "imageUrl": "https://i.ibb.co/xScc3w3/ecommerce.png",
+    "techStack": ["Next.js", "Tailwind CSS", "MongoDB", "Stripe"],
+    "liveUrl": "https://shop-now.vercel.app",
+    "githubUrl": "https://github.com/yourusername/ecommerce-store"
+  },
+  {
+    "title": "Doctor Booking System",
+    "description": "Online doctor appointment system with patient dashboard, booking history, and cancel options.",
+    "imageUrl": "https://i.ibb.co/jMypM9S/doctor-booking.png",
+    "techStack": ["React", "Firebase", "Node.js", "Express"],
+    "liveUrl": "https://doctor-booking.vercel.app",
+    "githubUrl": "https://github.com/yourusername/doctor-booking"
+  },
+  {
+    "title": "Eventora",
+    "description": "Event management app with Firebase authentication, event creation, and user profile system.",
+    "imageUrl": "https://i.ibb.co/6XY5Lnz/eventora.png",
+    "techStack": ["React", "Firebase", "Firestore", "Tailwind"],
+    "liveUrl": "https://eventora.vercel.app",
+    "githubUrl": "https://github.com/yourusername/eventora"
+  },
+  {
+    "title": "Blog CMS",
+    "description": "A content management system where admins can add, update, and delete blogs with SEO features.",
+    "imageUrl": "https://i.ibb.co/QNk1KZ2/blogcms.png",
+    "techStack": ["React", "Express", "MongoDB", "JWT"],
+    "liveUrl": "https://blogcms.vercel.app",
+    "githubUrl": "https://github.com/yourusername/blog-cms"
+  },
+  {
+    "title": "Task Manager",
+    "description": "A productivity app with task creation, due dates, priority management, and user authentication.",
+    "imageUrl": "https://i.ibb.co/KxwS4Xp/task-manager.png",
+    "techStack": ["React", "Firebase", "Tailwind CSS"],
+    "liveUrl": "https://taskify.vercel.app",
+    "githubUrl": "https://github.com/yourusername/task-manager"
+  },
+  {
+    "id": "ospic-webapp /real",
+    "title": "Ospic Hospital Management System",
+    "description": "Full hospital resource and patient management system built with Vue.js / Nuxt. Modules include appointments, doctors, patient records, billing, and bed‐ward management.",
+    "imageUrl": "https://source.unsplash.com/800x600/?hospital,clinic,medical",
+    "liveLink": "https://app.ospic.app",
+    "githubLink": "https://github.com/ospic/webapp",
+    "techStack": ["Vue.js", "Nuxt", "JavaScript", "SCSS", "Node.js"],
+    "category": "Medical"
+  },
+  {
+    "id": "everShop",
+    "title": "EverShop E-Commerce Platform",
+    "description": "Self-hosted e-commerce platform with React / Node.js backend, admin dashboard, SEO features, product catalog, order & customer management.",
+    "imageUrl": "https://source.unsplash.com/800x600/?ecommerce,store,shopping",
+    "liveLink": "https://github.com/ever-shop/demo",  // пример url
+    "githubLink": "https://github.com/ever-shop/ever-shop",
+    "techStack": ["React", "Node.js", "Express", "PostgreSQL"],
+    "category": "Ecommerce"
+  },
+  {
+    "id": "news-portal-react",
+    "title": "News Portal App",
+    "description": "A React + Redux app that fetches news from public APIs, features category filters, search, responsive layout and bookmarks for favorite articles.",
+    "imageUrl": "https://source.unsplash.com/800x600/?news,journalism,media",
+    "liveLink": "https://news-portal-live.example.com",
+    "githubLink": "https://github.com/Abhishekbtech/News-Portal",
+    "techStack": ["React", "Redux", "React Router", "CSS"],
+    "category": "News"
+  },
+  {
+    "id": "laravel-hospital-system",
+    "title": "Laravel Hospital Management System",
+    "description": "Hospital system built with Laravel, includes modules for doctors, patients, appointments, billing and dashboard for admin.",
+    "imageUrl": "https://source.unsplash.com/800x600/?hospital,doctor,health",
+    "liveLink": "https://yourdomain.com/laravel-hospital",
+    "githubLink": "https://github.com/yourusername/laravel-hospital-management",
+    "techStack": ["Laravel", "PHP", "MySQL", "Bootstrap"],
+    "category": "Medical"
+  },
+  {
+    "id": "everShop /real",
+    "title": "EverShop - Modern E-commerce Platform",
+    "description": "Open-source e-commerce solution built with React and Node.js. Includes product catalog, shopping cart, orders, payment integration, and admin dashboard.",
+    "imageUrl": "https://source.unsplash.com/800x600/?ecommerce,shopping",
+    "liveLink": "https://evershop.io/",
+    "githubLink": "https://github.com/evershopcommerce/evershop",
+    "techStack": ["React", "Node.js", "Express", "PostgreSQL"],
+    "category": "E-commerce"
+  },
+  {
+    "id": "spreeCommerce",
+    "title": "Spree Commerce",
+    "description": "A flexible open-source e-commerce framework. API-first, supports marketplaces, subscriptions, multi-store, multi-currency.",
+    "imageUrl": "https://source.unsplash.com/800x600/?online-store",
+    "liveLink": "https://spreecommerce.org/",
+    "githubLink": "https://github.com/spree/spree",
+    "techStack": ["Ruby on Rails", "PostgreSQL", "Redis"],
+    "category": "E-commerce"
+  },
+  {
+    "id": "gnuHealth",
+    "title": "GNU Health",
+    "description": "Open-source hospital and public health information system. Manages patients, appointments, labs, pharmacy, and public health records.",
+    "imageUrl": "https://source.unsplash.com/800x600/?hospital,healthcare",
+    "liveLink": "https://www.gnuhealth.org/",
+    "githubLink": "https://github.com/gnuhealth/gnuhealth",
+    "techStack": ["Python", "PostgreSQL", "Tryton Framework"],
+    "category": "Medical"
+  },
+  {
+    "id": "laravelHospital",
+    "title": "Laravel Hospital Management",
+    "description": "Hospital management system with doctors, patients, appointments, billing, and reports, built using Laravel framework.",
+    "imageUrl": "https://source.unsplash.com/800x600/?doctor,hospital",
+    "liveLink": "https://itsourcecode.com/hospital-management-laravel",
+    "githubLink": "https://github.com/topics/hospital-management",
+    "techStack": ["Laravel", "PHP", "MySQL"],
+    "category": "Medical"
+  },
+  {
+    "id": "hotelBookingApp",
+    "title": "Hotel Booking System",
+    "description": "Online hotel reservation platform featuring room listings, booking system, payments, and customer management.",
+    "imageUrl": "https://source.unsplash.com/800x600/?hotel,resort",
+    "liveLink": "https://hotel-booking-app-demo.vercel.app/",
+    "githubLink": "https://github.com/hotel-management-system",
+    "techStack": ["React", "Firebase", "Node.js", "MongoDB"],
+    "category": "Hotel"
+  },
+  {
+    "id": "nextNews",
+    "title": "Next.js News Portal",
+    "description": "Modern news portal app built with Next.js and News API integration. Features search, categories, trending and bookmark system.",
+    "imageUrl": "https://source.unsplash.com/800x600/?news,media",
+    "liveLink": "https://next-news-app.vercel.app/",
+    "githubLink": "https://github.com/abhiprojects/next-news-portal",
+    "techStack": ["Next.js", "React", "TailwindCSS", "News API"],
+    "category": "News"
+  },
+  {
+    "id": "reactNewsPortal",
+    "title": "React News Portal",
+    "description": "A React + Redux news portal app with search, categories, responsive design, and article bookmark system.",
+    "imageUrl": "https://source.unsplash.com/800x600/?journalism",
+    "liveLink": "https://news-portal-react.vercel.app/",
+    "githubLink": "https://github.com/Abhishekbtech/News-Portal",
+    "techStack": ["React", "Redux", "React Router"],
+    "category": "News"
+  },
+  {
+    "id": "eventora",
+    "title": "Eventora - Event Management",
+    "description": "Event management web app where users can create, manage and book events. Includes payment, ticket QR code, and event analytics.",
+    "imageUrl": "https://source.unsplash.com/800x600/?event,conference",
+    "liveLink": "https://eventora-demo.vercel.app/",
+    "githubLink": "https://github.com/eventora-app",
+    "techStack": ["React", "Firebase", "Express", "MongoDB"],
+    "category": "Event"
+  },
+  {
+    "id": "openEvent",
+    "title": "Open Event Project",
+    "description": "FOSSASIA open-source project for event management including scheduling, ticketing, and speaker dashboards.",
+    "imageUrl": "https://source.unsplash.com/800x600/?concert,festival",
+    "liveLink": "https://eventyay.com/",
+    "githubLink": "https://github.com/fossasia/open-event-frontend",
+    "techStack": ["Ember.js", "Node.js", "PostgreSQL"],
+    "category": "Event"
+  },
+  {
+    "id": "portfolioWebsite",
+    "title": "Personal Portfolio",
+    "description": "Modern responsive portfolio showcasing skills, projects, blogs, and contact section with email integration.",
+    "imageUrl": "https://source.unsplash.com/800x600/?portfolio,developer",
+    "liveLink": "https://your-portfolio.vercel.app/",
+    "githubLink": "https://github.com/yourusername/portfolio",
+    "techStack": ["React", "TailwindCSS", "Framer Motion"],
+    "category": "Portfolio"
+  }
+]

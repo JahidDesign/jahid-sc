@@ -1,0 +1,223 @@
+[
+  {
+    "category": "Programming",
+    "items": [
+      { 
+        "name": "HTML5", 
+        "color": "#E14E1D", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        "description": "Used for structuring web content and creating semantic, accessible layouts."
+      },
+      { 
+        "name": "CSS3", 
+        "color": "#0277BD", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        "description": "Used for styling websites with responsive layouts, animations, and modern UI designs."
+      },
+      { 
+        "name": "JavaScript", 
+        "color": "#F0DB4F", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "description": "Used for interactive features, DOM manipulation, and dynamic web applications."
+      },
+      { 
+        "name": "TypeScript", 
+        "color": "#007ACC", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "description": "Used for writing strongly-typed, scalable JavaScript applications with fewer runtime errors."
+      },
+      { 
+        "name": "Python", 
+        "color": "#306998", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "description": "Used for backend development, scripting, automation, and data processing."
+      }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "items": [
+      { 
+        "name": "React.js", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "description": "Used for building dynamic, component-based user interfaces for web applications."
+      },
+      { 
+        "name": "Node.js", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "description": "Used for backend development and building scalable server-side applications."
+      },
+      { 
+        "name": "MongoDB", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        "description": "Used as a NoSQL database for storing and querying JSON-like data efficiently."
+      },
+      { 
+        "name": "Express.js", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+        "description": "Used as a lightweight backend framework to build APIs and handle server routing."
+      },
+      { 
+        "name": "Tailwind CSS", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        "description": "Used for rapid UI development with utility-first, responsive, and customizable CSS."
+      },
+      { 
+        "name": "JavaScript", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        "description": "Used for creating interactive features and client-side logic."
+      }
+    ]
+  },
+  {
+    "category": "Frameworks & Libraries",
+    "items": [
+      { 
+        "name": "Next.js", 
+        "color": "#000000", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        "description": "Used for server-side rendering, SEO-friendly React applications, and static site generation."
+      },
+      { 
+        "name": "Vue.js", 
+        "color": "#41B883", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        "description": "Used for creating reactive and component-based web applications with smooth data binding."
+      },
+      { 
+        "name": "Angular", 
+        "color": "#DD0031", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+        "description": "Used for building robust, enterprise-level web applications with structured architecture."
+      },
+      { 
+        "name": "Tailwind CSS", 
+        "color": "#38BDF8", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        "description": "Used for fast UI prototyping and creating fully responsive designs."
+      }
+    ]
+  },
+  {
+    "category": "Digital Marketing",
+    "items": [
+      { 
+        "name": "Google Analytics", 
+        "icon": "https://cdn-icons-png.flaticon.com/512/2965/2965358.png",
+        "description": "Used to track and analyze website traffic and user behavior for optimization."
+      },
+      { 
+        "name": "Google Ads", 
+        "icon": "https://cdn-icons-png.flaticon.com/512/888/888853.png",
+        "description": "Used to create paid advertising campaigns to drive targeted traffic and conversions."
+      },
+      { 
+        "name": "Meta Ads", 
+        "icon": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+        "description": "Used for Facebook and Instagram advertising to increase reach and engagement."
+      },
+      { 
+        "name": "Canva", 
+        "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+        "description": "Used for designing marketing graphics, social media posts, and visual content."
+      },
+      { 
+        "name": "Mailchimp", 
+        "icon": "https://cdn.iconscout.com/icon/free/png-256/mailchimp-3521491-2944939.png",
+        "description": "Used for email marketing campaigns, automation, and subscriber management."
+      },
+      { 
+        "name": "SEO Tools", 
+        "icon": "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
+        "description": "Used for optimizing websites to improve search engine rankings and visibility."
+      }
+    ]
+  },
+  {
+    "category": "Databases",
+    "items": [
+      { 
+        "name": "MongoDB", 
+        "color": "#47A248", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        "description": "Used for storing flexible, document-based data in web applications."
+      },
+      { 
+        "name": "Firebase", 
+        "color": "#FFCA28", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+        "description": "Used for real-time database, authentication, and serverless app backend."
+      }
+    ]
+  },
+  {
+    "category": "DevOps & Deployment",
+    "items": [
+      { 
+        "name": "Docker", 
+        "color": "#0db7ed", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        "description": "Used for containerizing applications and ensuring consistent environments."
+      },
+      { 
+        "name": "Kubernetes", 
+        "color": "#326CE5", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+        "description": "Used to orchestrate and scale containerized applications efficiently."
+      },
+      { 
+        "name": "Netlify", 
+        "color": "#00C7B7", 
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/netlify.svg",
+        "description": "Used to deploy static sites and front-end apps quickly with continuous integration."
+      },
+      { 
+        "name": "Vercel", 
+        "color": "#000000", 
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg",
+        "description": "Used for deploying Next.js apps and front-end projects with fast CDN hosting."
+      },
+      { 
+        "name": "Heroku", 
+        "color": "#430098", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg",
+        "description": "Used for easy cloud deployment of web applications with managed servers."
+      },
+      { 
+        "name": "AWS", 
+        "color": "#FF9900", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+        "description": "Used for cloud hosting, storage, and scalable backend infrastructure."
+      }
+    ]
+  },
+  {
+    "category": "Design & Other Tools",
+    "items": [
+      { 
+        "name": "Figma", 
+        "color": "#F24E1E", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        "description": "Used for UI/UX design, wireframes, and interactive prototypes."
+      },
+      { 
+        "name": "Canva", 
+        "color": "#FF7A59", 
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/canva.svg",
+        "description": "Used to create marketing visuals, banners, and social media content."
+      },
+      { 
+        "name": "Postman", 
+        "color": "#FF6C37", 
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+        "description": "Used for API testing, development, and debugging."
+      },
+      { 
+        "name": "Swagger", 
+        "color": "#85EA2D", 
+        "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/swagger.svg",
+        "description": "Used to document APIs and provide interactive API testing."
+      }
+    ]
+  }
+]

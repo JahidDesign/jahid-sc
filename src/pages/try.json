@@ -1,0 +1,122 @@
+[
+  {
+    "section": "Home",
+    "slideTitle": "Portfolio Website",
+    "description": "A personal portfolio website showcasing projects, skills, and experience with a modern responsive design.",
+    "projectName": "Jahid's Portfolio",
+    "techStack": ["React", "Tailwind CSS", "Firebase"],
+    "projectURL": "https://jahid-portfolio.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "E-Commerce Platform",
+    "description": "An online store for electronics with user authentication, shopping cart, and payment integration.",
+    "projectName": "ElectroShop",
+    "techStack": ["Next.js", "Node.js", "MongoDB", "Stripe API"],
+    "projectURL": "https://electroshop.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Task Management App",
+    "description": "A productivity app for managing tasks, deadlines, and team collaboration in real-time.",
+    "projectName": "Taskify",
+    "techStack": ["React", "Express", "MongoDB", "Socket.io"],
+    "projectURL": "https://taskify-app.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Blog Platform",
+    "description": "A blogging platform with rich text editor, categories, and user commenting system.",
+    "projectName": "BlogSpace",
+    "techStack": ["Vue.js", "Node.js", "PostgreSQL"],
+    "projectURL": "https://blogspace.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Recipe Finder App",
+    "description": "A web application that allows users to search and save recipes with ingredients and cooking instructions.",
+    "projectName": "CookMate",
+    "techStack": ["React", "Spoonacular API", "Firebase"],
+    "projectURL": "https://cookmate.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Weather Forecast App",
+    "description": "A real-time weather app displaying forecasts based on location with dynamic visuals.",
+    "projectName": "Weatherly",
+    "techStack": ["React Native", "OpenWeather API"],
+    "projectURL": "https://weatherlyapp.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "AI Chatbot",
+    "description": "A conversational AI chatbot capable of answering questions and assisting with tasks.",
+    "projectName": "ChatAI",
+    "techStack": ["Python", "Flask", "OpenAI GPT API"],
+    "projectURL": "https://chatai.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Fitness Tracker App",
+    "description": "A mobile app that tracks workouts, diet, and progress over time with social sharing features.",
+    "projectName": "FitTrack",
+    "techStack": ["React Native", "Node.js", "MongoDB"],
+    "projectURL": "https://fittrackapp.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Online Learning Platform",
+    "description": "A platform to take online courses with video lessons, quizzes, and progress tracking.",
+    "projectName": "Learnify",
+    "techStack": ["Next.js", "Node.js", "PostgreSQL", "Stripe API"],
+    "projectURL": "https://learnify.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Travel Booking Website",
+    "description": "A web application to search and book flights, hotels, and tour packages.",
+    "projectName": "TravelGo",
+    "techStack": ["React", "Node.js", "MongoDB", "Google Maps API"],
+    "projectURL": "https://travelgo.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Movie Database App",
+    "description": "An app to browse, search, and save favorite movies with ratings and reviews.",
+    "projectName": "CineVerse",
+    "techStack": ["React", "TMDb API", "Firebase"],
+    "projectURL": "https://cineverse.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Cryptocurrency Tracker",
+    "description": "Track real-time crypto prices, market cap, and trends with charts and alerts.",
+    "projectName": "CryptoPulse",
+    "techStack": ["React", "CoinGecko API", "Chart.js"],
+    "projectURL": "https://cryptopulse.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Social Networking App",
+    "description": "A platform to connect with friends, post updates, and follow trends.",
+    "projectName": "ConnectMe",
+    "techStack": ["React Native", "Firebase", "Node.js"],
+    "projectURL": "https://connectmeapp.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Restaurant Ordering System",
+    "description": "An online system for browsing menu items, placing orders, and managing tables.",
+    "projectName": "FoodieHub",
+    "techStack": ["Vue.js", "Node.js", "MongoDB"],
+    "projectURL": "https://foodiehub.com"
+  },
+  {
+    "section": "Home",
+    "slideTitle": "Online Polling & Voting App",
+    "description": "An app to create polls, vote in real-time, and view analytics with charts.",
+    "projectName": "VoteNow",
+    "techStack": ["React", "Express", "MongoDB", "Socket.io"],
+    "projectURL": "https://votenow.com"
+  }
+]
