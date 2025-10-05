@@ -41,7 +41,7 @@ const BlogDetail = () => {
     const fetchBlog = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/blogpost");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/blogpost");
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data = await res.json();
         const foundBlog = data.find((b) => b._id === blogId);
@@ -53,7 +53,7 @@ const BlogDetail = () => {
         setBlog(foundBlog);
 
         // Increment views
-        await fetch(`http://localhost:3000/blogpost/${blogId}/views`, { method: "PATCH" });
+        await fetch(`https://jahids-reactfoliopro.onrender.com/blogpost/${blogId}/views`, { method: "PATCH" });
         setBlog((prev) => ({ ...prev, views: (prev?.views || 0) + 1 }));
       } catch (err) {
         console.error(err);
@@ -126,7 +126,7 @@ const BlogDetail = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:3000/insuranceservicesBooking", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/insuranceservicesBooking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

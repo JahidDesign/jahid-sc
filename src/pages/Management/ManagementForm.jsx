@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/management";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/management";
 
 export default function ManagementForm() {
   const [form, setForm] = useState({

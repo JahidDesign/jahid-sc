@@ -40,7 +40,7 @@ const ProfileModern = () => {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/profiledesign?email=${email}`
+          `https://jahids-reactfoliopro.onrender.com/profiledesign?email=${email}`
         );
         if (res.data && res.data.length > 0) {
           const p = res.data[0];
@@ -123,12 +123,12 @@ const ProfileModern = () => {
       if (profile?._id) {
         // update existing profile
         await axios.put(
-          `http://localhost:3000/profiledesign/${profile._id}`,
+          `https://jahids-reactfoliopro.onrender.com/profiledesign/${profile._id}`,
           updateData
         );
       } else {
         // create new profile
-        await axios.post(`http://localhost:3000/profiledesign`, updateData);
+        await axios.post(`https://jahids-reactfoliopro.onrender.com/profiledesign`, updateData);
       }
 
       alert("Profile saved successfully!");

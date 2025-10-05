@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
-const API_URL = "http://localhost:3000/ProjectsCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/ProjectsCarousel";
 
 const ProjectsCarousel = () => {
   const [items, setItems] = useState([]);

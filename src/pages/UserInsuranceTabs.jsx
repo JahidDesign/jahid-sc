@@ -3,8 +3,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import Swal from "sweetalert2";
 
-const API_MANAGEMENT = "http://localhost:3000/management";
-const API_BOOKINSURANCE = "http://localhost:3000/bookInsurance";
+const API_MANAGEMENT = "https://jahids-reactfoliopro.onrender.com/management";
+const API_BOOKINSURANCE = "https://jahids-reactfoliopro.onrender.com/bookInsurance";
 
 const UserInsuranceTabs = () => {
   const { user } = useContext(AuthContext);

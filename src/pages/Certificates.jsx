@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/Certificates";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/Certificates";
 
 const Certificates = () => {
   const [certificates, setCertificates] = useState([]);

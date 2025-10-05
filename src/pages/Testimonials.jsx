@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const API_URL = "http://localhost:3000/testimonials";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/testimonials";
 
 // Animation variants for cards
 const slideVariants = {

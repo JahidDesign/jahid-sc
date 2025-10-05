@@ -22,7 +22,7 @@ const ProfileCard = () => {
     const fetchProfile = async () => {
       try {
         const res = await fetch(
-          `http://localhost:3000/profiledesign?userId=${user?.uid}`
+          `https://jahids-reactfoliopro.onrender.com/profiledesign?userId=${user?.uid}`
         );
         const data = await res.json();
         if (data && data.length > 0) {

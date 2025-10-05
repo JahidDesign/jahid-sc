@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/education";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/education";
 
 const EducationDetails = () => {
   const { id } = useParams();

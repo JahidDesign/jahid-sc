@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:3000/projects";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/projects";
 const ROTATE_INTERVAL = 20 * 60 * 1000; // 20 minutes in milliseconds
 
 const HomeProjects = () => {

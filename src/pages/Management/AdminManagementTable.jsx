@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Trash2, Edit, Save } from "lucide-react";
 
-const API_URL = "http://localhost:3000/management";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/management";
 
 export default function AdminManagementTable() {
   const [programs, setPrograms] = useState([]);

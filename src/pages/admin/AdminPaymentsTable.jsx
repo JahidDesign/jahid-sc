@@ -15,7 +15,7 @@ const AdminPaymentsTable = () => {
 
   const fetchPayments = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/payments");
+      const { data } = await axios.get("https://jahids-reactfoliopro.onrender.com/payments");
       setPayments(data);
     } catch (err) {
       console.error(err);
@@ -45,7 +45,7 @@ const AdminPaymentsTable = () => {
   const updateStatus = async (id, newStatus) => {
     setPayments((prev) => prev.map((p) => (p._id === id ? { ...p, status: newStatus } : p)));
     try {
-      const { data } = await axios.patch(`http://localhost:3000/payments/${id}`, {
+      const { data } = await axios.patch(`https://jahids-reactfoliopro.onrender.com/payments/${id}`, {
         status: newStatus,
       });
       setPayments((prev) =>
@@ -75,7 +75,7 @@ const AdminPaymentsTable = () => {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/payments/${id}`);
+        await axios.delete(`https://jahids-reactfoliopro.onrender.com/payments/${id}`);
         setPayments((prev) => prev.filter((p) => p._id !== id));
         Swal.fire("Deleted!", "Payment has been deleted.", "success");
       } catch (err) {
@@ -103,7 +103,7 @@ const AdminPaymentsTable = () => {
     if (confirm.isConfirmed) {
       try {
         await Promise.all(
-          selectedPayments.map((id) => axios.delete(`http://localhost:3000/payments/${id}`))
+          selectedPayments.map((id) => axios.delete(`https://jahids-reactfoliopro.onrender.com/payments/${id}`))
         );
         setPayments((prev) => prev.filter((p) => !selectedPayments.includes(p._id)));
         setSelectedPayments([]);

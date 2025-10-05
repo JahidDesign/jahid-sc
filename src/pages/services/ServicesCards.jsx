@@ -15,7 +15,7 @@ const ServicesCards = () => {
   const fetchServices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:3000/services");
+      const response = await axios.get("https://jahids-reactfoliopro.onrender.com/services");
       if (response.data.success) {
         setServices(response.data.data);
         setFilteredServices(response.data.data);

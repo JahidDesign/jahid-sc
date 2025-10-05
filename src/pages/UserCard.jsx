@@ -27,7 +27,7 @@ const UserCard = ({ user }) => {
 
   const handleUpdate = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/profiledesign/${user._id}`, {
+      const res = await fetch(`https://jahids-reactfoliopro.onrender.com/profiledesign/${user._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -52,7 +52,7 @@ const UserCard = ({ user }) => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:3000/profiledesign/${user._id}`, {
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/profiledesign/${user._id}`, {
           method: "DELETE",
         });
         if (res.ok) Swal.fire("Deleted!", "Profile has been deleted.", "success");

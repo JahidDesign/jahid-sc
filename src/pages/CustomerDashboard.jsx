@@ -11,7 +11,7 @@ const Dashboard = () => {
       return;
     }
 
-    fetch("http://localhost:3000/customer/protected", {
+    fetch("https://jahids-reactfoliopro.onrender.com/customer/protected", {
       method: "GET",
   headers: {
     "Content-Type": "application/json",

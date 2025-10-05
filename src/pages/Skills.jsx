@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const API_URL = "http://localhost:3000/skills";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/skills";
 
 const SkillsCardSection = () => {
   const [skills, setSkills] = useState([]);

@@ -54,7 +54,7 @@ const InsuranceServicesList = () => {
   // ✅ Fetch services
   const fetchServices = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/insuranceservices");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/insuranceservices");
       if (res.data && res.data.services) {
         setServices(res.data.services);
       } else {
@@ -97,7 +97,7 @@ const InsuranceServicesList = () => {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/insuranceservices/${id}`);
+        await axios.delete(`https://jahids-reactfoliopro.onrender.com/insuranceservices/${id}`);
         Swal.fire("Deleted!", "Service has been deleted.", "success");
         fetchServices();
       } catch (error) {
@@ -113,12 +113,12 @@ const InsuranceServicesList = () => {
     try {
       if (editMode) {
         await axios.put(
-          `http://localhost:3000/insuranceservices/${formData._id}`,
+          `https://jahids-reactfoliopro.onrender.com/insuranceservices/${formData._id}`,
           formData
         );
         Swal.fire("Updated!", "Service updated successfully.", "success");
       } else {
-        await axios.post("http://localhost:3000/insuranceservices", formData);
+        await axios.post("https://jahids-reactfoliopro.onrender.com/insuranceservices", formData);
         Swal.fire("Created!", "New service added successfully.", "success");
       }
       fetchServices();

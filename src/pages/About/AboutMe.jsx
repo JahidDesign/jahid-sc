@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Download, Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:3000/aboutme";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/aboutme";
 
 const AboutMe = () => {
   const [about, setAbout] = useState(null);

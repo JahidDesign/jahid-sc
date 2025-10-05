@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaFilePdf } from "react-icons/fa";
 
-const API_URL = "http://localhost:3000/aboutme";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/aboutme";
 
 const steps = ["Basic Info", "Roles/Interests", "Social Links", "Images & CV", "Admin & Submit"];
 

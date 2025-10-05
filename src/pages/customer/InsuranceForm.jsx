@@ -33,7 +33,7 @@ export default function QuoteLifeInsuranceFrom() {
   // Confirm & upload to database
   const confirmSubmit = async () => {
     try {
-      await axios.post("http://localhost:3000/management", formData);
+      await axios.post("https://jahids-reactfoliopro.onrender.com/management", formData);
 
       Swal.fire({
         icon: "success",

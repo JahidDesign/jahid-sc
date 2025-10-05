@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_URL = "http://localhost:3000/testimonials";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/testimonials";
 
 const TestimonialForm = ({ onSuccess }) => {
   const [step, setStep] = useState(1);

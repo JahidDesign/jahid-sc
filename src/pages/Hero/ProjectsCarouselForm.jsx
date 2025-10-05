@@ -4,7 +4,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/ProjectsCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/ProjectsCarousel";
 
 const ProjectsCarouselForm = ({ selectedItem, onSuccess = () => {}, onCancel }) => {
   const [formData, setFormData] = useState({

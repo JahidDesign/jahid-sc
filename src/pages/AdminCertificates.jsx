@@ -4,7 +4,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { Edit2, Trash2, PlusCircle, Save, X } from "lucide-react";
 
-const API_URL = "http://localhost:3000/certificates";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/certificates";
 
 const AdminCertificates = () => {
   const [certificates, setCertificates] = useState([]);

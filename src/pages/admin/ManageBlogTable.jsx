@@ -18,7 +18,7 @@ const ManageBlogTable = () => {
   // Fetch all blogs
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/blogpost");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/blogpost");
       setBlogs(res.data);
     } catch (error) {
       console.error("Failed to fetch blogs", error);
@@ -44,7 +44,7 @@ const ManageBlogTable = () => {
 
     if (confirmed.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/blogpost/${id}`);
+        await axios.delete(`https://jahids-reactfoliopro.onrender.com/blogpost/${id}`);
         setBlogs(blogs.filter((b) => b._id !== id));
         Swal.fire("Deleted!", "Blog has been deleted.", "success");
       } catch (error) {
@@ -90,7 +90,7 @@ const ManageBlogTable = () => {
     try {
       const updatedBlog = { ...formData, updatedAt: new Date().toISOString() };
       await axios.put(
-        `http://localhost:3000/blogpost/${editingBlog._id}`,
+        `https://jahids-reactfoliopro.onrender.com/blogpost/${editingBlog._id}`,
         updatedBlog
       );
       setBlogs(
@@ -112,7 +112,7 @@ const ManageBlogTable = () => {
     try {
       const newBlog = { ...formData, date: new Date().toISOString() };
       const res = await axios.post(
-        "http://localhost:3000/blogpost",
+        "https://jahids-reactfoliopro.onrender.com/blogpost",
         newBlog
       );
       setBlogs([res.data, ...blogs]);

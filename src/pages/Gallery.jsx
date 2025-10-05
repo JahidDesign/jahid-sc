@@ -4,7 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Pencil, ChevronLeft, ChevronRight } from "lucide-react";
 
-const API_URL = "http://localhost:3000/skillsIns";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/skillsIns";
 
 const Gallery = ({ isAdmin = false }) => {
   const [skills, setSkills] = useState([]);

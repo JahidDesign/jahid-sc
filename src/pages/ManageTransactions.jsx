@@ -6,7 +6,7 @@ const ManageTransactions = () => {
   const [totalIncome, setTotalIncome] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:3000/insuranceservices")
+    fetch("https://jahids-reactfoliopro.onrender.com/insuranceservices")
       .then((res) => res.json())
       .then((data) => {
         setTransactions(data);

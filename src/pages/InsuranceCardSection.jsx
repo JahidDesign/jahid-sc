@@ -28,7 +28,7 @@ const InsuranceDashboard = () => {
       if (premiumMin) query += `&premiumMin=${premiumMin}`;
       if (premiumMax) query += `&premiumMax=${premiumMax}`;
 
-      const apiUrl = `http://localhost:3000/ourInsurancePolice${query}`;
+      const apiUrl = `https://jahids-reactfoliopro.onrender.com/ourInsurancePolice${query}`;
       console.log("Fetching:", apiUrl); // ✅ Debug log
 
       const response = await fetch(apiUrl);

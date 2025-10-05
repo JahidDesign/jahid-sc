@@ -12,7 +12,7 @@ import {
 import { AuthContext } from "../context/AuthContext";
 import { Helmet } from "react-helmet-async";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://jahids-reactfoliopro.onrender.com";
 
 const Register = () => {
   const [formData, setFormData] = useState({

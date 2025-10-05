@@ -13,7 +13,7 @@ const ClaimRequest = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/policies`)
+      .get(`https://jahids-reactfoliopro.onrender.com/policies`)
       .then((res) => {
         // Filter only approved or existing policies
         setPolicies(res.data.data);

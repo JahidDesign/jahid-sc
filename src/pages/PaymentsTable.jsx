@@ -12,7 +12,7 @@ const PaymentsTable = () => {
   useEffect(() => {
     const fetchPayments = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/payments");
+        const res = await axios.get("https://jahids-reactfoliopro.onrender.com/payments");
         setPayments(res.data);
       } catch (err) {
         console.error("Error fetching payments:", err);

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../context/AuthContext";
 import { Mail, Lock, Shield, Chrome, ArrowRight, Eye, EyeOff } from "lucide-react";
 
-const API_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_BACKEND_URL || "https://jahids-reactfoliopro.onrender.com";
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });

@@ -13,7 +13,7 @@ const CustomerPaymentsTable = () => {
       try {
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:3000/payments?email=${user.email}`
+          `https://jahids-reactfoliopro.onrender.com/payments?email=${user.email}`
         );
         setPayments(res.data);
       } catch (err) {

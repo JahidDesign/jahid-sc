@@ -19,7 +19,7 @@ const AdminServicesTable = () => {
   const fetchServices = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:3000/services");
+      const response = await axios.get("https://jahids-reactfoliopro.onrender.com/services");
       if (response.data.success) setServices(response.data.data);
     } catch (error) {
       console.error("Error fetching services:", error);
@@ -35,7 +35,7 @@ const AdminServicesTable = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this service?")) {
       try {
-        await axios.delete(`http://localhost:3000/services/${id}`);
+        await axios.delete(`https://jahids-reactfoliopro.onrender.com/services/${id}`);
         setServices(services.filter((s) => s._id !== id));
       } catch (error) {
         console.error("Error deleting service:", error);
@@ -60,7 +60,7 @@ const AdminServicesTable = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:3000/services/${editService}`,
+        `https://jahids-reactfoliopro.onrender.com/services/${editService}`,
         formData
       );
       if (response.data.success) {

@@ -56,7 +56,7 @@ const AddPolicyForm = () => {
       return;
     }
 
-    const order = await fetch("http://localhost:3000/create-order", {
+    const order = await fetch("https://jahids-reactfoliopro.onrender.com/create-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: amount * 100 }), // Convert to paise
@@ -93,7 +93,7 @@ const AddPolicyForm = () => {
 
     try {
       const data = { ...policy };
-      const res = await fetch("http://localhost:3000/policies", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/policies", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

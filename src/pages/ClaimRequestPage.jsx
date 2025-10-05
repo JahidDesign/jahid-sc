@@ -13,7 +13,7 @@ const ClaimRequestPage = () => {
   useEffect(() => {
     const fetchPolicies = async () => {
       try {
-        const res = await fetch("http://localhost:3000/paymentsInsurance");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/paymentsInsurance");
         const data = await res.json();
         // Only approved policies
         const approvedPolicies = data.filter((p) => p.status === "approved");
@@ -41,7 +41,7 @@ const ClaimRequestPage = () => {
     formData.append("userName", user.displayName || user.name); // current user name
 
     try {
-      const res = await fetch("http://localhost:3000/claims", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/claims", {
         method: "POST",
         body: formData,
       });

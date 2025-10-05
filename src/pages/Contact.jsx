@@ -17,7 +17,7 @@ const Contact = () => {
     setStatus("sending");
 
     try {
-      const res = await fetch("http://localhost:3000/contact", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contact),

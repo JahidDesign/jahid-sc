@@ -15,7 +15,7 @@ export default function InsuranceCards() {
 
     const fetchApplications = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/management");
+        const { data } = await axios.get("https://jahids-reactfoliopro.onrender.com/management");
         // Filter by logged-in user's email
         const userApps = data.filter(app => app.email === user.email);
         setApplications(userApps);

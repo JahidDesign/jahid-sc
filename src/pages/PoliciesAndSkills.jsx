@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const POLICIES_API = "http://localhost:3000/policies";
-const SKILLS_API = "http://localhost:3000/skills";
+const POLICIES_API = "https://jahids-reactfoliopro.onrender.com/policies";
+const SKILLS_API = "https://jahids-reactfoliopro.onrender.com/skills";
 
 const PoliciesAndSkills = () => {
   // Policies State

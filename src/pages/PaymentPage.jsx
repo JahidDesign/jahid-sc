@@ -10,7 +10,7 @@ function PaymentPage() {
 
   useEffect(() => {
     // 👇 Call backend to create PaymentIntent
-    fetch("http://localhost:3000/create-payment-intent", {
+    fetch("https://jahids-reactfoliopro.onrender.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: 2000, currency: "usd" }), // $20.00

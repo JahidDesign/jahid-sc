@@ -10,7 +10,7 @@ const BlogManagementTable = () => {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/blogpost");
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/blogpost");
       const data = await res.json();
       setBlogs(data);
     } catch (err) {
@@ -37,7 +37,7 @@ const BlogManagementTable = () => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:3000/blogpost/${id}`, {
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/blogpost/${id}`, {
           method: "DELETE",
         });
         const data = await res.json();
@@ -66,7 +66,7 @@ const BlogManagementTable = () => {
   // Save updated blog
   const handleUpdate = async (id, updatedBlog) => {
     try {
-      const res = await fetch(`http://localhost:3000/blogpost/${id}`, {
+      const res = await fetch(`https://jahids-reactfoliopro.onrender.com/blogpost/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedBlog),

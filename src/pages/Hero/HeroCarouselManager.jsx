@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Trash2, Edit2, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const API_URL = "http://localhost:3000/PortfolioCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/PortfolioCarousel";
 
 const AdminHeroManagement = () => {
   const [slides, setSlides] = useState([]);

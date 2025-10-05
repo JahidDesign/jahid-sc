@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trash2, Mail, Phone, AlertCircle, Search, X } from "lucide-react";
 
-const API_URL = "http://localhost:3000/contact";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/contact";
 
 // ---------------------------
 // Inquiry Style Mapping

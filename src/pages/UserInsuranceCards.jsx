@@ -9,8 +9,8 @@ import {
   FileText,
 } from "lucide-react";
 
-const API_MANAGEMENT = "http://localhost:3000/management";
-const API_BOOKINSURANCE = "http://localhost:3000/bookInsurance";
+const API_MANAGEMENT = "https://jahids-reactfoliopro.onrender.com/management";
+const API_BOOKINSURANCE = "https://jahids-reactfoliopro.onrender.com/bookInsurance";
 
 const UserInsuranceCards = () => {
   const { user } = useContext(AuthContext);

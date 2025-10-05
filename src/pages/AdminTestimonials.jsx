@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Edit2, Trash2, PlusCircle } from "lucide-react";
 
-const API_URL = "http://localhost:3000/testimonials";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/testimonials";
 
 const AdminTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);

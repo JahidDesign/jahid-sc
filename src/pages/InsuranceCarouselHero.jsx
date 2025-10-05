@@ -11,7 +11,7 @@ const InsuranceCarousel = () => {
   const [retryCount, setRetryCount] = useState(0);
   const [imageLoadErrors, setImageLoadErrors] = useState({});
 
-  const API_BASE = "http://localhost:3000/InsuranceCarousel";
+  const API_BASE = "https://jahids-reactfoliopro.onrender.com/InsuranceCarousel";
   const MAX_RETRIES = 3;
 
   // Mock fallback data for demonstration and testing

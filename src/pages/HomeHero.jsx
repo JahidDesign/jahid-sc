@@ -13,7 +13,7 @@ const HeroSlider = () => {
     // Fetch slides from backend
     const fetchSlides = async () => {
       try {
-        const res = await fetch("http://localhost:3000/HeroCarousel");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/HeroCarousel");
         const data = await res.json();
         setSlides(data);
       } catch (err) {

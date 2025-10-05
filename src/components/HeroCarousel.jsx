@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 
-const API_URL = "http://localhost:3000/PortfolioCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/PortfolioCarousel";
 
 const HeroCarousel = () => {
   const [slides, setSlides] = useState([]);

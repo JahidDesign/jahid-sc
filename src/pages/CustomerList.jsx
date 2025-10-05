@@ -17,7 +17,7 @@ const CustomerList = () => {
     }
 
     try {
-      const res1 = await fetch("http://localhost:3000/customer", {
+      const res1 = await fetch("https://jahids-reactfoliopro.onrender.com/customer", {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -31,7 +31,7 @@ const CustomerList = () => {
 
       const customers = customerResponse.data; // based on your backend's shape
 
-      const res2 = await fetch("http://localhost:3000/profiledesign");
+      const res2 = await fetch("https://jahids-reactfoliopro.onrender.com/profiledesign");
       const profileData = await res2.json();
 
       const matchedUser = customers.find(

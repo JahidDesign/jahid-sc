@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:3000/management";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/management";
 
 export default function ManagementCards() {
   const [programs, setPrograms] = useState([]);

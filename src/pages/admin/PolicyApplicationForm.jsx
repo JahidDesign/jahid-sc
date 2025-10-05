@@ -26,7 +26,7 @@ const PolicyApplicationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/policiesuser", formData);
+      await axios.post("https://jahids-reactfoliopro.onrender.com/policiesuser", formData);
       Swal.fire({
         icon: "success",
         title: "Policy Submitted",

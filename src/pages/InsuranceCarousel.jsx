@@ -19,7 +19,7 @@ const InsuranceCarousel = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:3000/InsuranceCarousel");
+        const response = await fetch("https://jahids-reactfoliopro.onrender.com/InsuranceCarousel");
         const data = await response.json();
 
         if (data.success && Array.isArray(data.data)) {

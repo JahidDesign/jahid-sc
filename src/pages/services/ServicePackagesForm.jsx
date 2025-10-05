@@ -71,7 +71,7 @@ const fullPackages = [
   },
 ];
 
-const API_URL = "http://localhost:3000/ourServices";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/ourServices";
 
 const ServicePackagesForm = () => {
   const { user } = useContext(AuthContext);

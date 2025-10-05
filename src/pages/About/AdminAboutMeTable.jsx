@@ -4,7 +4,7 @@ import { FaEdit, FaTrash, FaPlus, FaDownload } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_URL = "http://localhost:3000/aboutme";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/aboutme";
 const roleOptions = ["Web Developer", "Digital Marketing"];
 
 const AdminTableCRUD = () => {

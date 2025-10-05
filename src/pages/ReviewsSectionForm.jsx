@@ -18,7 +18,7 @@ const ReviewsSectionForm = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("http://localhost:3000/users");
+        const response = await fetch("https://jahids-reactfoliopro.onrender.com/users");
         const data = await response.json();
         setReviews(data);
       } catch (error) {
@@ -58,7 +58,7 @@ const ReviewsSectionForm = () => {
   // Step 2 → Submit
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch("https://jahids-reactfoliopro.onrender.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

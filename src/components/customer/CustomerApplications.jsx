@@ -10,7 +10,7 @@ export default function CustomerApplications() {
   useEffect(() => {
     if (!user?.email) return;
     axios
-      .get("http://localhost:3000/management")
+      .get("https://jahids-reactfoliopro.onrender.com/management")
       .then((res) => {
         const myApps = res.data.filter((app) => app.email === user.email);
         setApplications(myApps);

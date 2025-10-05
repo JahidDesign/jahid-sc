@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SkillsForm from "./SkillsForm";
 import { Edit2, Trash2 } from "lucide-react";
 
-const API_URL = "http://localhost:3000/skills";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/skills";
 
 const AdminSkills = () => {
   const [skills, setSkills] = useState([]);

@@ -16,7 +16,7 @@ const VisitorCount = ({ blogId, initialCount = 0 }) => {
 
     const fetchViews = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/blogpost/${blogId}`);
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/blogpost/${blogId}`);
         if (!res.ok) throw new Error("Failed to fetch views");
         const data = await res.json();
         setViews(data.views || initialCount);

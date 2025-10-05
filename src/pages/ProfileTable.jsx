@@ -14,7 +14,7 @@ const ProfileTableAPI = () => {
   // Fetch profiles from API
   const fetchProfiles = async () => {
     try {
-      const res = await fetch("http://localhost:3000/profiledesign");
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/profiledesign");
       if (!res.ok) throw new Error("Failed to fetch profiles");
       const data = await res.json();
       setProfiles(data);
@@ -32,7 +32,7 @@ const ProfileTableAPI = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this profile?")) return;
     try {
-      const res = await fetch(`http://localhost:3000/profiledesign/${id}`, {
+      const res = await fetch(`https://jahids-reactfoliopro.onrender.com/profiledesign/${id}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");

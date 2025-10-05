@@ -13,7 +13,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/profiledesign?userId=${user.uid}`
+          `https://jahids-reactfoliopro.onrender.com/profiledesign?userId=${user.uid}`
         );
         if (res.data && res.data.length > 0) setProfile(res.data[0]);
       } catch (err) {

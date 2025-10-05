@@ -55,7 +55,7 @@ const InsuranceForm = () => {
     };
 
     try {
-      await axios.post('http://localhost:3000/management', payload);
+      await axios.post('https://jahids-reactfoliopro.onrender.com/management', payload);
       Swal.fire({
         icon: 'success',
         title: 'Application Submitted!',

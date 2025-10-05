@@ -39,7 +39,7 @@ const MeetOurTeamDemo = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/customer")
+      .get("https://jahids-reactfoliopro.onrender.com/customer")
       .then((res) => {
         const data = res.data;
 

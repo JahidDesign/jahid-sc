@@ -27,7 +27,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     const fetchPolicies = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/policies");
+        const { data } = await axios.get("https://jahids-reactfoliopro.onrender.com/policies");
         setPolicies(data.data || []);
       } catch (err) {
         console.error("Failed to fetch policies", err);
@@ -64,7 +64,7 @@ const CheckoutForm = () => {
     try {
       // 1. Create payment intent on backend
       const { data: clientSecretRes } = await axios.post(
-        "http://localhost:3000/payments",
+        "https://jahids-reactfoliopro.onrender.com/payments",
         {
           policyId: selectedPolicy?._id || null,
           title: selectedPolicy?.title || cardData.policyTitle || "Custom Payment",

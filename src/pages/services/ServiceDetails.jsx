@@ -14,7 +14,7 @@ const ServiceDetails = () => {
     const fetchService = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/services");
+        const response = await axios.get("https://jahids-reactfoliopro.onrender.com/services");
         const foundService = response.data.find((s) => s._id === id);
         setService(foundService || null);
       } catch (error) {

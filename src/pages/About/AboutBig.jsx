@@ -7,7 +7,7 @@ const AboutBig = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:3000/about")
+    fetch("https://jahids-reactfoliopro.onrender.com/about")
       .then((res) => res.json())
       .then((data) => {
         if (data.success && data.data.length > 0) {

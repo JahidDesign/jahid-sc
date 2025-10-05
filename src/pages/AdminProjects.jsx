@@ -4,7 +4,7 @@ import { ExternalLink, Github, Edit2, Trash2, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/projects";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/projects";
 
 const AdminProjects = () => {
   const [projects, setProjects] = useState([]);

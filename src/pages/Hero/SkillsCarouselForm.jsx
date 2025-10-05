@@ -3,7 +3,7 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/SkillsCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/SkillsCarousel";
 
 const SkillsCarouselForm = ({ selectedItem, onSuccess = () => {}, onCancel }) => {
   const [formData, setFormData] = useState({

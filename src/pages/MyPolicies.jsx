@@ -14,7 +14,7 @@ const MyPolicies = () => {
       if (!user?.email) return;
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/insuranceservicesBooking");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/insuranceservicesBooking");
         if (!res.ok) throw new Error("Failed to fetch policies");
         const data = await res.json();
 

@@ -73,7 +73,7 @@ const ManagementTable = () => {
   const fetchApplications = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/management");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/management");
       setApplications(res.data);
     } catch (err) {
       console.error(err);
@@ -97,7 +97,7 @@ const ManagementTable = () => {
         prev.map((app) => (app._id === id ? { ...app, status } : app))
       );
 
-      await axios.patch(`http://localhost:3000/management/${id}`, { status });
+      await axios.patch(`https://jahids-reactfoliopro.onrender.com/management/${id}`, { status });
 
       setConfirmModal({ isOpen: false, action: null, title: "", message: "", loading: false });
     } catch (err) {
@@ -123,7 +123,7 @@ const ManagementTable = () => {
       // Optimistic UI delete
       setApplications((prev) => prev.filter((app) => app._id !== id));
 
-      await axios.delete(`http://localhost:3000/management/${id}`);
+      await axios.delete(`https://jahids-reactfoliopro.onrender.com/management/${id}`);
 
       setConfirmModal({ isOpen: false, action: null, title: "", message: "", loading: false });
     } catch (err) {

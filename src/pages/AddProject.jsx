@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/projects";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/projects";
 
 const AddProject = () => {
   const [formData, setFormData] = useState({

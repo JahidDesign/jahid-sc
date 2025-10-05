@@ -12,7 +12,7 @@ const VisitorDetailsPage = () => {
   // Function to fetch visitor details
   const fetchVisitor = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/visitors/${id}`);
+      const res = await fetch(`https://jahids-reactfoliopro.onrender.com/visitors/${id}`);
       if (!res.ok) throw new Error("Failed to fetch visitor details");
       const data = await res.json();
       setVisitor(data);
@@ -31,7 +31,7 @@ const VisitorDetailsPage = () => {
     const incrementViews = async () => {
       try {
         // Increment views on the server
-        await fetch(`http://localhost:3000/visitors/${id}/increment-view`, {
+        await fetch(`https://jahids-reactfoliopro.onrender.com/visitors/${id}/increment-view`, {
           method: "POST",
         });
       } catch (err) {
@@ -50,7 +50,7 @@ const VisitorDetailsPage = () => {
 
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`http://localhost:3000/visitors/${id}`);
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/visitors/${id}`);
         if (!res.ok) throw new Error("Failed to fetch visitor views");
         const data = await res.json();
         setViews(data.views || 0);

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Loader2, Eye } from "lucide-react";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/service-requests"; // আপনার backend API
+const API_URL = "https://jahids-reactfoliopro.onrender.com/service-requests"; // আপনার backend API
 
 const OrderList = () => {
   const [orders, setOrders] = useState([]);

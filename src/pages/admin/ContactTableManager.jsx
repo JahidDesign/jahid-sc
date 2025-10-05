@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Trash2, Edit, X, Check } from "lucide-react";
 
-const API_URL = "http://localhost:3000/contact";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/contact";
 
 export default function ContactTableManager() {
   const [contacts, setContacts] = useState([]);

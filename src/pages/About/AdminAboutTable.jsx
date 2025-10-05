@@ -27,7 +27,7 @@ const AdminAboutTable = () => {
   // Fetch data
   const fetchAboutData = () => {
     setLoading(true);
-    fetch("http://localhost:3000/about")
+    fetch("https://jahids-reactfoliopro.onrender.com/about")
       .then((res) => res.json())
       .then((data) => {
         if (data.success) setAboutData(data.data);
@@ -54,8 +54,8 @@ const AdminAboutTable = () => {
     e.preventDefault();
 
     const url = editingId
-      ? `http://localhost:3000/about/${editingId}`
-      : "http://localhost:3000/about";
+      ? `https://jahids-reactfoliopro.onrender.com/about/${editingId}`
+      : "https://jahids-reactfoliopro.onrender.com/about";
     const method = editingId ? "PUT" : "POST";
 
     try {
@@ -112,7 +112,7 @@ const AdminAboutTable = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://localhost:3000/about/${id}`, { method: "DELETE" });
+          const res = await fetch(`https://jahids-reactfoliopro.onrender.com/about/${id}`, { method: "DELETE" });
           const data = await res.json();
           if (data.success) {
             Swal.fire("Deleted!", "Entry has been deleted.", "success");

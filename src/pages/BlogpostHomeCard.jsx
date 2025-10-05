@@ -17,7 +17,7 @@ const BlogpostHomeCard = () => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/blogpostHome");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/blogpostHome");
         if (!res.ok) throw new Error("Failed to fetch blogs");
 
         const data = await res.json();
@@ -57,7 +57,7 @@ const BlogpostHomeCard = () => {
 
   const handleReadArticle = async (blogId) => {
     try {
-      await fetch(`http://localhost:3000/blogpostHome/${blogId}/increment-view`, {
+      await fetch(`https://jahids-reactfoliopro.onrender.com/blogpostHome/${blogId}/increment-view`, {
         method: "POST",
       });
       setBlogs((prev) =>

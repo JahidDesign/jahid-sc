@@ -147,7 +147,7 @@ const PricingPlans = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/bookServices", bookingData);
+      await axios.post("https://jahids-reactfoliopro.onrender.com/bookServices", bookingData);
       Swal.fire({
         icon: "success",
         title: "Booking Confirmed",

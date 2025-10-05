@@ -18,7 +18,7 @@ const CustomerCards = () => {
 
     const controller = new AbortController();
 
-    fetch("http://localhost:3000/customer", {
+    fetch("https://jahids-reactfoliopro.onrender.com/customer", {
       headers: {
         Authorization: `Bearer ${authHeader}`,
         "Content-Type": "application/json",

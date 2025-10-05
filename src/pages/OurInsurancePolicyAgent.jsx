@@ -64,7 +64,7 @@ const OurInsurancePolicyAgent = ({ role = "admin" }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/ourInsurancePolice", {
+      const response = await fetch("https://jahids-reactfoliopro.onrender.com/ourInsurancePolice", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, estimatedPremium }),

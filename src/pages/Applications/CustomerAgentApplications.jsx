@@ -9,7 +9,7 @@ export default function CustomerAgentApplications() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/management");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/management");
       // filter apps by email (customer/agent sees only theirs)
       const filtered = res.data.filter((app) => app.email === user?.email);
       setApplications(filtered);

@@ -8,7 +8,7 @@ const VisitorNewsTable = () => {
 
   const fetchVisitors = async () => {
     try {
-      const res = await fetch("http://localhost:3000/visitors");
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/visitors");
       const data = await res.json();
       setVisitors(data);
     } catch (error) {
@@ -41,7 +41,7 @@ const VisitorNewsTable = () => {
           },
         });
 
-        const res = await fetch(`http://localhost:3000/visitors/${id}`, {
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/visitors/${id}`, {
           method: "DELETE",
         });
 
@@ -87,7 +87,7 @@ const VisitorNewsTable = () => {
         },
       });
 
-      const res = await fetch(`http://localhost:3000/visitors/${id}`, {
+      const res = await fetch(`https://jahids-reactfoliopro.onrender.com/visitors/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(editData),

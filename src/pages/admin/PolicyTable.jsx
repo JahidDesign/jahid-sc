@@ -8,7 +8,7 @@ const PolicyTable = () => {
 
   const fetchPolicies = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/policiesuser");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/policiesuser");
       setPolicies(res.data);
     } catch (error) {
       console.error("Error fetching policies:", error);
@@ -32,7 +32,7 @@ const PolicyTable = () => {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/policiesuser/${id}`);
+        await axios.delete(`https://jahids-reactfoliopro.onrender.com/policiesuser/${id}`);
         Swal.fire("Deleted!", "Policy has been deleted.", "success");
         fetchPolicies();
       } catch (error) {
@@ -44,7 +44,7 @@ const PolicyTable = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      await axios.patch(`http://localhost:3000/policiesuser/${id}`, { status });
+      await axios.patch(`https://jahids-reactfoliopro.onrender.com/policiesuser/${id}`, { status });
       Swal.fire("Updated!", `Policy status changed to ${status}`, "success");
       fetchPolicies();
     } catch (error) {
@@ -59,7 +59,7 @@ const PolicyTable = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/policiesuser/${editData._id}`, editData);
+      await axios.put(`https://jahids-reactfoliopro.onrender.com/policiesuser/${editData._id}`, editData);
       Swal.fire("Success", "Policy updated successfully", "success");
       setEditData(null);
       fetchPolicies();

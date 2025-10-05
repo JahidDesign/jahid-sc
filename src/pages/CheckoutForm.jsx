@@ -11,7 +11,7 @@ const CheckoutForm = () => {
     e.preventDefault();
     setProcessing(true);
 
-    const res = await fetch("http://localhost:3000/create-payment-intent", {
+    const res = await fetch("https://jahids-reactfoliopro.onrender.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),

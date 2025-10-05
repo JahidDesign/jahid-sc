@@ -15,7 +15,7 @@ const Subscribers = () => {
   useEffect(() => {
     const fetchSubscribers = async () => {
       try {
-        const res = await fetch("http://localhost:3000/subscribers");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/subscribers");
         if (!res.ok) throw new Error("Failed to fetch subscribers");
         const data = await res.json();
         setSubscriberCount(data.length);
@@ -52,7 +52,7 @@ const Subscribers = () => {
 
     try {
       setSubmitting(true);
-      const res = await fetch("http://localhost:3000/subscribers", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/subscribers", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, email: emailLower }),

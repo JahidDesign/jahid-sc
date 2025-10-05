@@ -43,7 +43,7 @@ const ServiceForm = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/services", formData, {
+      const response = await axios.post("https://jahids-reactfoliopro.onrender.com/services", formData, {
         headers: { "Content-Type": "application/json" },
       });
 

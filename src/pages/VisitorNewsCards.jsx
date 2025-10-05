@@ -11,7 +11,7 @@ const VisitorNewsCards = () => {
   const fetchVisitors = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/visitors");
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/visitors");
       const data = await res.json();
       setVisitors(data);
       setIsVisible(true);

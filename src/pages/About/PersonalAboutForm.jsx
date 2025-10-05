@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/about";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/about";
 
 export default function PersonalAboutForm() {
   const [formData, setFormData] = useState({

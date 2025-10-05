@@ -23,7 +23,7 @@ const BlogFeed = () => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/blogpost");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/blogpost");
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data = await res.json();
         const blogsWithExtras = data.map((b) => ({
@@ -50,7 +50,7 @@ const BlogFeed = () => {
     const interval = setInterval(() => {
       blogs.forEach(async (blog) => {
         try {
-          const res = await fetch(`http://localhost:3000/claims?blogId=${blog._id}`);
+          const res = await fetch(`https://jahids-reactfoliopro.onrender.com/claims?blogId=${blog._id}`);
           if (!res.ok) return;
           const comments = await res.json();
           setBlogs((prev) =>
@@ -91,7 +91,7 @@ const BlogFeed = () => {
     );
 
     try {
-      const res = await fetch("http://localhost:3000/claims", {
+      const res = await fetch("https://jahids-reactfoliopro.onrender.com/claims", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ blogId, text: commentText }),

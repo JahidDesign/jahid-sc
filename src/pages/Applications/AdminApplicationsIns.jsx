@@ -17,7 +17,7 @@ export default function AdminApplicationsIns() {
   // ---------------- Fetch All ----------------
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/management");
+      const res = await axios.get("https://jahids-reactfoliopro.onrender.com/management");
       setApplications(res.data);
     } catch (err) {
       console.error("Error fetching data:", err);
@@ -32,7 +32,7 @@ export default function AdminApplicationsIns() {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/management", newApp);
+      await axios.post("https://jahids-reactfoliopro.onrender.com/management", newApp);
       Swal.fire("Success", "New application added!", "success");
       setNewApp({ name: "", email: "", insuranceType: "", coverage: "", status: "Pending" });
       fetchData();
@@ -44,7 +44,7 @@ export default function AdminApplicationsIns() {
   // ---------------- Update Status ----------------
   const updateStatus = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:3000/management/${id}`, {
+      await axios.put(`https://jahids-reactfoliopro.onrender.com/management/${id}`, {
         status: newStatus,
       });
       Swal.fire("Updated!", `Status changed to ${newStatus}`, "success");
@@ -58,7 +58,7 @@ export default function AdminApplicationsIns() {
   const handleEdit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/management/${editApp._id}`, editApp);
+      await axios.put(`https://jahids-reactfoliopro.onrender.com/management/${editApp._id}`, editApp);
       Swal.fire("Updated!", "Application updated successfully", "success");
       setEditApp(null);
       fetchData();
@@ -80,7 +80,7 @@ export default function AdminApplicationsIns() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/management/${id}`);
+          await axios.delete(`https://jahids-reactfoliopro.onrender.com/management/${id}`);
           Swal.fire("Deleted!", "Application has been removed.", "success");
           fetchData();
         } catch (err) {

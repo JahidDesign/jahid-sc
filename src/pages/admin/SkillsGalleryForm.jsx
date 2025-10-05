@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const API_URL = "http://localhost:3000/skillsIns";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/skillsIns";
 
 const SkillsGalleryForm = () => {
   const [skills, setSkills] = useState([{ name: "", imageUrl: "" }]);

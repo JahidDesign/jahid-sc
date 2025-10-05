@@ -33,14 +33,14 @@ const BlogHomeDetail = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch(`http://localhost:3000/blogpostHome/${id}`);
+        const res = await fetch(`https://jahids-reactfoliopro.onrender.com/blogpostHome/${id}`);
         if (!res.ok) throw new Error("Blog not found");
         const data = await res.json();
         setBlog(data);
         window.scrollTo({ top: 0, behavior: "smooth" });
 
         // Increment views
-        fetch(`http://localhost:3000/blogpostHome/${data._id}/increment-view`, {
+        fetch(`https://jahids-reactfoliopro.onrender.com/blogpostHome/${data._id}/increment-view`, {
           method: "POST",
         }).catch(console.error);
 
@@ -48,7 +48,7 @@ const BlogHomeDetail = () => {
         if (data.tags?.length > 0) {
           const tagsQuery = data.tags.join(",");
           const relatedRes = await fetch(
-            `http://localhost:3000/blogpostHome/search?tags=${tagsQuery}`
+            `https://jahids-reactfoliopro.onrender.com/blogpostHome/search?tags=${tagsQuery}`
           );
           if (relatedRes.ok) {
             const relatedData = await relatedRes.json();

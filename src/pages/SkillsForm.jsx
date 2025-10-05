@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { PlusCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const API_URL = "http://localhost:3000/skills";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/skills";
 
 const SkillsForm = ({ onSuccess }) => {
   const [newSkill, setNewSkill] = useState({

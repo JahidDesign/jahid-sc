@@ -64,7 +64,7 @@ const AddBlogForm = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/blogpost", newBlog);
+      await axios.post("https://jahids-reactfoliopro.onrender.com/blogpost", newBlog);
       showSuccessAlert();
       setFormData({
         title: "",

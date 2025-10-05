@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import Swal from "sweetalert2";
 
-const API_BASE = import.meta?.env?.VITE_API_URL || "http://localhost:3000";
+const API_BASE = import.meta?.env?.VITE_API_URL || "https://jahids-reactfoliopro.onrender.com";
 
 const StatusPill = ({ status }) => {
   const base = "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium";

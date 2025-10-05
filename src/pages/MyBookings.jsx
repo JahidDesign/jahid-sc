@@ -14,7 +14,7 @@ const MyBookings = () => {
     const fetchBookings = async () => {
       try {
         // Fetch all bookings from bookInsurance API
-        const res = await fetch("http://localhost:3000/bookInsurance");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/bookInsurance");
         const data = await res.json();
 
         // Filter bookings for the logged-in user

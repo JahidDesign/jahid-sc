@@ -20,7 +20,7 @@ const AddVisitorForm = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:3000/visitors", {
+      const response = await fetch("https://jahids-reactfoliopro.onrender.com/visitors", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

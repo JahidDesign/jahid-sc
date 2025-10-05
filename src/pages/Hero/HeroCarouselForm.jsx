@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/HeroCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/HeroCarousel";
 
 const HeroCarouselForm = ({ selectedItem, onSuccess, onCancel }) => {
   const [formData, setFormData] = useState({

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
-const API_URL = "http://localhost:3000/HeroCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/HeroCarousel";
 
 const DaynamicCarousel = () => {
   const [items, setItems] = useState([]);

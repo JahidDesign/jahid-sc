@@ -12,7 +12,7 @@ const ReviewsCarouselModern = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch("http://localhost:3000/users");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/users");
         const data = await res.json();
         setReviews(data);
       } catch (err) {

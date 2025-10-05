@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaStar, FaEdit, FaTrash, FaEye } from "react-icons/fa";
 
-const API_URL = "http://localhost:3000/users";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/users";
 
 const AdminReviewsTable = () => {
   const [reviews, setReviews] = useState([]);

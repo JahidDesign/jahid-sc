@@ -4,7 +4,7 @@ import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_URL = "http://localhost:3000/HeroCarousel";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/HeroCarousel";
 
 const AdminHeroCarousel = () => {
   const [items, setItems] = useState([]);

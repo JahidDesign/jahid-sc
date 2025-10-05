@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FiTrash2, FiEdit, FiChevronDown, FiPlus } from "react-icons/fi";
 
 // =================== Config ===================
-const API_BASE_URL = "http://localhost:3000"; // Your backend URL
+const API_BASE_URL = "https://jahids-reactfoliopro.onrender.com"; // Your backend URL
 const ROLES = ["admin", "customer"];
 const STATUSES = ["active", "inactive"];
 

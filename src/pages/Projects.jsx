@@ -4,7 +4,7 @@ import { ExternalLink, Github, Search, Pencil, Trash2, ChevronLeft, ChevronRight
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/projects";
+const API_URL = "https://jahids-reactfoliopro.onrender.com/projects";
 
 const Projects = ({ isAdmin = false }) => {
   const [projects, setProjects] = useState([]);

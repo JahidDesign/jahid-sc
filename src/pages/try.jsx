@@ -49,7 +49,7 @@ const BlogDetail = () => {
     const fetchBlog = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/blogpost");
+        const res = await fetch("https://jahids-reactfoliopro.onrender.com/blogpost");
         if (!res.ok) throw new Error("Failed to fetch blogs");
         const data = await res.json();
         const foundBlog = data.find((b) => b._id === blogId);
@@ -62,7 +62,7 @@ const BlogDetail = () => {
 
         // Increment views
         await fetch(
-          `http://localhost:3000/blogpost/${blogId}/views`,
+          `https://jahids-reactfoliopro.onrender.com/blogpost/${blogId}/views`,
           {
             method: "PATCH",
           }
@@ -147,7 +147,7 @@ const BlogDetail = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:3000/insuranceservicesBooking",
+        "https://jahids-reactfoliopro.onrender.com/insuranceservicesBooking",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

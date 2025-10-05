@@ -10,7 +10,7 @@ const InsuranceCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showAddForm, setShowAddForm] = useState(false);
 
-  const API_BASE = 'http://localhost:3000/InsuranceCarousel';
+  const API_BASE = 'https://jahids-reactfoliopro.onrender.com/InsuranceCarousel';
 
   // Fetch items from API
   const fetchItems = async () => {
