@@ -70,9 +70,8 @@ import CustomerLayout from "../components/customer/CustomerLayout.jsx";
 import CustomerDashboard from "../components/customer/CustomerDashboard.jsx";
 import CustomerPaymentsTable from "../components/customer/CustomerPaymentsTable.jsx";
 import PaymentPage from "../components/PaymentPage.jsx";
-import CustomerPolicies from "../pages/customer/CustomerPolicies";
 import PaymentStatus from "../pages/customer/PaymentStatus";
-import Insurance from "../pages/customer/Insurance";
+
 import ReviewsSectionFormCustomer from "../pages/customer/ReviewsSectionFormCustomer.jsx";
 
 // ---------------- Management Layout ----------------
@@ -121,11 +120,10 @@ const AppRoutes = () => (
       <Route path="/customer" element={<PrivateRoute><CustomerLayout /></PrivateRoute>}>
         <Route index element={<CustomerDashboard />} />
         <Route path="reviews" element={<ReviewsSectionFormCustomer />} />
-        <Route path="my-policies" element={<CustomerPolicies />} />
         <Route path="payment-status" element={<CustomerPaymentsTable />} />
         <Route path="payment-page" element={<PaymentPage />} />
         <Route path="payments" element={<PaymentStatus />} />
-        <Route path="claims" element={<Insurance />} />
+  
       </Route>
 
       {/* ---------------- Admin Routes ---------------- */}

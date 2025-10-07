@@ -25,10 +25,8 @@ const CustomerSidebar = () => {
     () => [
       { name: "Dashboard", path: "/customer", icon: FaHome },
        { name: "Reviews Section", path: "/customer/reviews", icon: FaFileAlt },
-      { name: "My Policies", path: "/customer/my-policies", icon: FaClipboardList },
       { name: "Payment Status", path: "/customer/payment-status", icon: FaMoneyBill },
       { name: "Payment Page", path: "/customer/payment-page", icon: FaMoneyBill },
-      { name: "Claim Requests", path: "/customer/claims", icon: FaFileAlt },
       { name: "Settings", path: "/customer/settings", icon: FaCog },
     ],
     []

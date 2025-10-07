@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
 import ProfileCard from "../components/ProfileCard";
+import CustomerList from "./CustomerList";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Profile = () => {
@@ -36,6 +37,7 @@ const Profile = () => {
       </Helmet>
 
       <ProfileCard profile={profile} />
+      <CustomerList />
     </HelmetProvider>
   );
 };

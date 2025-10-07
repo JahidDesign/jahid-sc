@@ -17,7 +17,7 @@ const CustomerList = () => {
     }
 
     try {
-      const res1 = await fetch("https://jahids-reactfoliopro.onrender.com/customer", {
+      const res1 = await fetch("https://jahids-reactfoliopro.onrender.com/customers", {
         headers: {
           "Authorization": `Bearer ${token}`
         }

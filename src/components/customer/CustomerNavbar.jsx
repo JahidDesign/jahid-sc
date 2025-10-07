@@ -17,11 +17,11 @@ const CustomerNavbar = () => {
       {/* Logo */}
       <Link to="/" className="flex items-center gap-3">
         <img
-          src="insurancen.svg"
+          src="JahidTheCoder.svg"
           alt="Logo"
           className="w-10 h-10 rounded-full object-cover"
         />
-        <h1 className="text-2xl font-bold text-blue-600">Smart Insurance</h1>
+        <h1 className="text-2xl font-bold text-blue-600">JaHidTheCoder</h1>
       </Link>
 
       {/* User Info */}

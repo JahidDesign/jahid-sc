@@ -41,7 +41,7 @@ const UserMenu = ({ user, userRole, logout, closeMenu }) => (
         Profile
       </Link>
       <Link
-        to="/dashboard"
+        to="/customer"
         onClick={closeMenu}
         className="flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors text-sm font-medium"
       >

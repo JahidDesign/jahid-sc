@@ -42,7 +42,7 @@ const SkillsCarousel = () => {
   }
 
   return (
-    <div className="relative w-full h-[520px] md:h-[600px] overflow-hidden rounded-none shadow-sm font-['Poppins'] bg-gray-900">
+    <div className="relative w-full h-[100vh] md:h-[600px] overflow-hidden rounded-none shadow-sm font-['Poppins'] bg-gray-900">
       <AnimatePresence mode="wait">
         <motion.div
           key={items[current]._id || items[current].id || current}
