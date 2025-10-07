@@ -74,13 +74,13 @@ const DaynamicCarousel = () => {
               
               <TypeAnimation
                 sequence={[
-                  "Web Developer 💻",
+                  "Modern Code Mind",
                   2000,
-                  "UI/UX Designer 🎨",
+                  "SocialSparkz",
                   2000,
-                  "MERN Stack Engineer 🚀",
+                  "Designify Print",
                   2000,
-                  "Freelancer 🌍",
+                  "Jahid Digtal Space",
                   2000,
                 ]}
                 wrapper="span"

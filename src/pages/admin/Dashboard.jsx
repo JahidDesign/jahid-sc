@@ -4,7 +4,7 @@ import CustomerTable from "../CustomerTable";
 import AdminPaymentsTable from "./AdminPaymentsTable";
 import BlogContactManager from "./VisitorContact";
 import  PolicyForm from "./PolicyForm";
-import  OrderList from "./OrderList";
+import  TourForm from "./TourForm";
 import Subscribers from "./SubscribersMG";
 import SkillsGalleryForm from "./SkillsGalleryForm";
 
@@ -70,6 +70,7 @@ const Dashboard = () => {
       </motion.section>
 
       {/* Applications */}
+     
       <motion.section
         variants={sectionVariants}
         initial="hidden"
@@ -82,7 +83,7 @@ const Dashboard = () => {
         </h2>
         <motion.div variants={sectionVariants}>
           <div className="text-gray-500 text-sm">
-            <OrderList/>
+            <TourForm/>
           </div>
         </motion.div>
       </motion.section>

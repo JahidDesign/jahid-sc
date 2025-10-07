@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, ArrowUpRight } from "lucide-react";
 
 const API_URL = "https://jahids-reactfoliopro.onrender.com/PortfolioCarousel";
 
@@ -71,44 +71,56 @@ const HeroCarousel = () => {
 
   if (slideCount === 0)
     return (
-      <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-900">
-        <p className="text-gray-400 text-sm sm:text-base md:text-lg">Loading carousel...</p>
+      <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-purple-200 text-lg font-light tracking-wide">Loading Experience...</p>
+        </div>
       </div>
     );
 
   const currentSlide = slides[currentIndex];
 
   return (
-    <div className="w-full h-screen relative overflow-hidden bg-white">
-      {/* Background Image with Parallax Effect */}
+    <div className="w-full h-screen relative overflow-hidden bg-black">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20 animate-[gradientShift_8s_ease-in-out_infinite]"></div>
+      
+      {/* Background Image with Modern Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-white/60 z-10"></div>
         <img
           key={currentIndex}
           src={currentSlide.image}
           alt={currentSlide.title}
-          className="w-full h-full object-cover animate-[zoomIn_0.7s_ease-out]"
+          className="w-full h-full object-cover animate-[fadeZoom_0.8s_ease-out]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent z-10"></div>
+        {/* Modern Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30"></div>
       </div>
 
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+
       {/* Main Content Container */}
-      <div className="relative z-20 h-full flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
+      <div className="relative z-20 h-full flex flex-col justify-between p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20">
         {/* Top Bar - Counter and Meta */}
         <div className="flex justify-between items-start">
-          {/* Slide Counter */}
-          <div className="backdrop-blur-md bg-black/10 border border-black/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5">
-            <span className="text-black font-bold text-xs sm:text-sm md:text-base lg:text-lg">
+          {/* Slide Counter - Modern Glass Design */}
+          <div className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl px-5 py-3 sm:px-6 sm:py-3.5 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+            <span className="text-white font-bold text-base sm:text-lg md:text-xl">
               {String(currentIndex + 1).padStart(2, '0')}
             </span>
-            <span className="text-black/60 mx-1 sm:mx-1.5 md:mx-2 text-xs sm:text-sm md:text-base">/</span>
-            <span className="text-black/60 text-xs sm:text-sm md:text-base">{String(slideCount).padStart(2, '0')}</span>
+            <span className="text-white/40 mx-2 text-base sm:text-lg md:text-xl">/</span>
+            <span className="text-white/60 text-base sm:text-lg md:text-xl">{String(slideCount).padStart(2, '0')}</span>
           </div>
 
-          {/* Tag */}
+          {/* Tag - Pill Design */}
           {currentSlide.tag && (
-            <div className="backdrop-blur-md bg-black/10 border border-black/20 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5">
-              <span className="text-black text-[10px] sm:text-xs md:text-sm font-medium tracking-wider uppercase">
+            <div className="backdrop-blur-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full px-5 py-3 sm:px-6 sm:py-3.5 hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300">
+              <span className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase">
                 {currentSlide.tag}
               </span>
             </div>
@@ -116,34 +128,44 @@ const HeroCarousel = () => {
         </div>
 
         {/* Bottom Content */}
-        <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
-          {/* Title - Editable */}
-          <div className="max-w-5xl">
-            <input
-              type="text"
-              value={currentSlide.title}
-              onChange={handleTitleChange}
-              className="w-full bg-transparent border-none outline-none text-black font-black tracking-tight leading-none transition-all duration-300 hover:text-gray-800
-                text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
-              style={{ 
-                textShadow: '3px 3px 12px rgba(255,255,255,0.9), 0 0 40px rgba(255,255,255,0.5)',
-                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-              }}
-            />
-            <div className="h-0.5 sm:h-1 w-12 sm:w-16 md:w-20 lg:w-24 bg-gradient-to-r from-black to-transparent mt-3 sm:mt-4 md:mt-5 lg:mt-6"></div>
-          </div>
+        <div className="space-y-6 sm:space-y-8 md:space-y-10">
+          {/* Title - Editable with Modern Typography */}
+       <div className="max-w-4xl">
+  <input
+    type="text"
+    value={currentSlide.title}
+    onChange={handleTitleChange}
+    className="w-full bg-transparent border-none outline-none text-white font-extrabold tracking-tight leading-tight transition-all duration-300 hover:text-purple-200
+      text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl animate-[slideUp_0.6s_ease-out]"
+    style={{
+      textShadow:
+        "0 0 60px rgba(168, 85, 247, 0.35), 0 0 30px rgba(59, 130, 246, 0.25)",
+      fontFamily:
+        '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+      WebkitTextStroke: "0.6px rgba(255,255,255,0.1)",
+    }}
+  />
+  <div className="h-1 w-20 bg-gradient-to-r from-purple-500 via-blue-500 to-transparent mt-3 sm:mt-4 rounded-full animate-[slideRight_0.8s_ease-out]"></div>
+</div>
 
-          {/* Description */}
-          <p className="text-gray-800 font-light leading-relaxed max-w-2xl
-            text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"
-            style={{ textShadow: '1px 1px 4px rgba(255,255,255,0.8)' }}>
+
+          {/* Description with Modern Styling */}
+          <p className="text-gray-300 font-light leading-relaxed max-w-3xl
+            text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl animate-[slideUp_0.8s_ease-out]"
+            style={{ 
+              textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+              animationDelay: '0.2s',
+              opacity: 0,
+              animationFillMode: 'forwards'
+            }}>
             {currentSlide.description}
           </p>
 
           {/* Caption and CTA Row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 md:gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 animate-[slideUp_0.8s_ease-out]" style={{animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards'}}>
             {currentSlide.caption && (
-              <p className="text-gray-600 italic font-light text-[10px] sm:text-xs md:text-sm lg:text-base">
+              <p className="text-gray-400 italic font-light text-xs sm:text-sm md:text-base lg:text-lg flex items-center gap-2">
+                <span className="w-8 h-px bg-gradient-to-r from-purple-500/50 to-transparent"></span>
                 {currentSlide.caption}
               </p>
             )}
@@ -153,54 +175,57 @@ const HeroCarousel = () => {
                 href={currentSlide.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 backdrop-blur-md bg-black text-white border-2 border-black
-                  px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4
-                  text-[10px] sm:text-xs md:text-sm lg:text-base
-                  font-bold tracking-wider uppercase transition-all duration-300
-                  hover:bg-transparent hover:text-black hover:scale-105 active:scale-95"
+                className="group relative inline-flex items-center gap-3 backdrop-blur-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white
+                  px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5
+                  text-xs sm:text-sm md:text-base lg:text-lg
+                  font-bold tracking-wider uppercase transition-all duration-500 overflow-hidden
+                  hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105 active:scale-95 rounded-full"
               >
-                View Project
-                <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                <span className="relative flex items-center gap-3">
+                  View Project
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                </span>
               </a>
             )}
           </div>
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Modern Circular Design */}
       {slideCount > 1 && (
         <>
           <button
             onClick={prevSlide}
             disabled={isTransitioning}
-            className="absolute left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-30
-              w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16
-              backdrop-blur-md bg-black/10 border-2 border-black/30
+            className="absolute left-4 sm:left-6 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-30
+              w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20
+              backdrop-blur-xl bg-white/5 border border-white/10 rounded-full
               flex items-center justify-center group transition-all duration-300
-              hover:bg-black hover:border-black hover:scale-110 active:scale-95
-              disabled:opacity-50 disabled:cursor-not-allowed"
+              hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:border-transparent hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95
+              disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-black group-hover:text-white transition-colors" />
+            <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white transition-transform group-hover:-translate-x-1" />
           </button>
           <button
             onClick={nextSlide}
             disabled={isTransitioning}
-            className="absolute right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-30
-              w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16
-              backdrop-blur-md bg-black/10 border-2 border-black/30
+            className="absolute right-4 sm:right-6 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-30
+              w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20
+              backdrop-blur-xl bg-white/5 border border-white/10 rounded-full
               flex items-center justify-center group transition-all duration-300
-              hover:bg-black hover:border-black hover:scale-110 active:scale-95
-              disabled:opacity-50 disabled:cursor-not-allowed"
+              hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 hover:border-transparent hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95
+              disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-black group-hover:text-white transition-colors" />
+            <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white transition-transform group-hover:translate-x-1" />
           </button>
         </>
       )}
 
-      {/* Dot Navigation */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 right-4 sm:right-6 md:right-8 lg:right-12 flex flex-col gap-2 sm:gap-2.5 md:gap-3 z-30">
+      {/* Dot Navigation - Modern Vertical Bars */}
+      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 right-6 sm:right-10 md:right-14 flex flex-col gap-3 z-30">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -211,14 +236,28 @@ const HeroCarousel = () => {
                 setTimeout(() => setIsTransitioning(false), 700);
               }
             }}
-            className={`w-0.5 sm:w-1 transition-all duration-300 ${
+            className={`w-1 rounded-full transition-all duration-500 group relative ${
               idx === currentIndex 
-                ? "h-8 sm:h-10 md:h-12 lg:h-14 bg-black shadow-lg shadow-black/50" 
-                : "h-4 sm:h-6 md:h-8 lg:h-10 bg-black/30 hover:bg-black/60"
+                ? "h-12 sm:h-14 md:h-16 lg:h-20 bg-gradient-to-b from-purple-500 to-blue-500 shadow-lg shadow-purple-500/50" 
+                : "h-6 sm:h-8 md:h-10 bg-white/20 hover:bg-white/40 hover:h-8 sm:hover:h-10 md:hover:h-12"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
-          />
+          >
+            {idx === currentIndex && (
+              <span className="absolute -left-8 top-1/2 -translate-y-1/2 text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+            )}
+          </button>
         ))}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-30">
+        <div 
+          className="h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 ease-linear"
+          style={{ width: `${((currentIndex + 1) / slideCount) * 100}%` }}
+        ></div>
       </div>
 
       {/* Touch Area for Swipe */}
@@ -228,16 +267,49 @@ const HeroCarousel = () => {
         onTouchEnd={handleTouchEnd}
       />
 
-      {/* CSS Animation */}
+      {/* CSS Animations */}
       <style>{`
-        @keyframes zoomIn {
+        @keyframes fadeZoom {
           from {
-            transform: scale(1.1);
+            transform: scale(1.15);
             opacity: 0;
+            filter: blur(10px);
           }
           to {
             transform: scale(1);
             opacity: 1;
+            filter: blur(0);
+          }
+        }
+        
+        @keyframes slideUp {
+          from {
+            transform: translateY(30px);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
+        @keyframes slideRight {
+          from {
+            transform: translateX(-30px);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        
+        @keyframes gradientShift {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.8;
           }
         }
       `}</style>

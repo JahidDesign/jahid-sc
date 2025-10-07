@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+// File: src/pages/Blog.jsx
+import React, { Suspense, lazy } from "react";
 import { Helmet } from "react-helmet-async";
-import BlogFeed from "./BlogCard";
-import VisitorNewsCards from "./VisitorNewsCards";
-import BlogsCarousel from "./Hero/BlogsCarousel.jsx";
+
+// ✅ Lazy Imports for performance optimization
+const BlogFeed = lazy(() => import("./BlogCard"));
+const VisitorNewsCards = lazy(() => import("./VisitorNewsCards"));
+const Tours = lazy(() => import("./Tours.jsx"));
+const BlogsCarousel = lazy(() => import("./Hero/BlogsCarousel.jsx"));
 
 const Blog = () => {
-  
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* ✅ SEO + Portfolio Meta */}
@@ -44,28 +47,45 @@ const Blog = () => {
         <link rel="apple-touch-icon" href="/portfolio-favicon.png" />
       </Helmet>
 
-      {/* Hero Carousel */}
-      <BlogsCarousel />
+      {/* ✅ Suspense fallback for Lazy Components */}
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center h-screen text-gray-500 animate-pulse">
+            Loading content...
+          </div>
+        }
+      >
+        {/* Hero Carousel */}
+        <section className="w-full mb-16">
+          <BlogsCarousel />
+        </section>
 
-      {/* Page Header */}
-      <div className="max-w-7xl mx-auto mb-10 text-center">
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-2">
-          Jahid Hasan Portfolio Blog
-        </h1>
-        <p className="text-gray-600">
-          Insights on digital marketing, modern web development, and creative Canva design.
-        </p>
-      </div>
+        {/* Page Header */}
+        <header className="max-w-6xl mx-auto text-center mb-16 px-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">
+            Jahid Hasan Portfolio Blog
+          </h1>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            Discover expert strategies in digital marketing, modern web development, and high-quality printable design — crafted to strengthen your brand identity and inspire innovation.
+          </p>
 
-      {/* Blog Feed */}
-      <div className=" mx-auto mt-16">
-        <BlogFeed  />
-      </div>
+        </header>
 
-      {/* Visitor News Section */}
-      <div className="max-w-7xl mx-auto mt-16">
-        <VisitorNewsCards />
-      </div>
+        {/* Blog Feed Section */}
+        <section className="w-full max-w-7xl mx-auto px-4 mt-16">
+          <BlogFeed />
+        </section>
+
+        {/* Tours Section */}
+        <section className="w-full max-w-7xl mx-auto px-4 mt-20">
+          <Tours />
+        </section>
+
+        {/* Visitor News Section */}
+        <section className="w-full max-w-7xl mx-auto px-4 mt-20 mb-20">
+          <VisitorNewsCards />
+        </section>
+      </Suspense>
     </div>
   );
 };

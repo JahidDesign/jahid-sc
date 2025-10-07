@@ -73,13 +73,13 @@ const ContactCarousel = () => {
               {/* Typing Animation */}
               <TypeAnimation
                 sequence={[
-                  "Web Developer 💻",
+                  "Lest's Build Something Amazing Together!",
                   2000,
-                  "UI/UX Designer 🎨",
+                  "Work with Me- Web Development || Digital Marketing | Design",
                   2000,
-                  "MERN Stack Engineer 🚀",
+                  "Have a Project in Mind? Let's Connect!",
                   2000,
-                  "Freelancer 🌍",
+                  "Get in Touch With Jahid Digital Space",
                   2000,
                 ]}
                 wrapper="span"

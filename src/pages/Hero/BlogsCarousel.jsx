@@ -51,7 +51,7 @@ const BlogsCarousel = () => {
   const currentItem = items[current];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden rounded-none">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentItem._id || currentItem.id || current}
@@ -91,13 +91,13 @@ const BlogsCarousel = () => {
 
               <TypeAnimation
                 sequence={[
-                  "Web Developer ",
+                  "Next-Level UI/UX Design ",
                   2000,
-                  "UI/UX Designer ",
+                  "Build Smart Web Apps ",
                   2000,
-                  "MERN Stack Engineer ",
+                  "Marketing Made Simple ",
                   2000,
-                  "Freelancer ",
+                  "Barnd And Build ",
                   2000,
                 ]}
                 wrapper="span"

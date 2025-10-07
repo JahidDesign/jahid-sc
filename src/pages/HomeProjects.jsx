@@ -5,7 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const API_URL = "https://jahids-reactfoliopro.onrender.com/projects";
-const ROTATE_INTERVAL = 20 * 60 * 1000; // 20 minutes in milliseconds
+const ROTATE_INTERVAL = 20 * 60 * 1000; // 20 minutes
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.6 } },
+};
 
 const HomeProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -13,6 +27,7 @@ const HomeProjects = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
+  // Fetch projects
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -34,7 +49,7 @@ const HomeProjects = () => {
       });
   }, []);
 
-  // Auto rotate projects every 20 minutes
+  // Rotate projects every 20 minutes
   useEffect(() => {
     if (!projects.length) return;
 
@@ -44,7 +59,7 @@ const HomeProjects = () => {
         const nextIndex = (startIndex + 6) % projects.length;
         return projects.slice(nextIndex, nextIndex + 6).length === 6
           ? projects.slice(nextIndex, nextIndex + 6)
-          : projects.slice(0, 6); // loop back
+          : projects.slice(0, 6);
       });
     }, ROTATE_INTERVAL);
 
@@ -53,55 +68,54 @@ const HomeProjects = () => {
 
   if (loading) {
     return (
-      <div className="w-full h-screen flex items-center justify-center">
-        <p className="text-gray-600 text-lg animate-pulse">
-          Loading projects...
-        </p>
+      <div className="w-full h-screen flex items-center justify-center bg-gray-50">
+        <p className="text-gray-600 text-lg animate-pulse">Loading projects...</p>
       </div>
     );
   }
 
   if (!projects.length) {
     return (
-      <div className="w-full h-screen flex items-center justify-center">
+      <div className="w-full h-screen flex items-center justify-center bg-gray-50">
         <p className="text-gray-500 text-lg">No projects found.</p>
       </div>
     );
   }
 
   return (
-    <section className="w-full min-h-screen bg-gray-50 py-10">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+    <section className="w-full min-h-screen  flex flex-col justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col flex-1">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
           Portfolio Projects
         </h2>
 
-        {/* Projects Grid with fade animation */}
+        {/* Projects Grid */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={visibleProjects.map(p => p._id).join("-")} // trigger re-render on change
-            className="grid gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            key={visibleProjects.map((p) => p._id).join("-")}
+            className="grid gap-6 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-1"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
           >
             {visibleProjects.map((project) => (
               <motion.div
                 key={project._id}
-                whileHover={{ scale: 1.02 }}
+                variants={cardVariants}
+                whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md flex flex-col w-full"
+                className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md overflow-hidden flex flex-col h-full"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-56 sm:h-64 md:h-52 lg:h-48 object-cover"
                 />
-                <div className="p-4 flex flex-col justify-between flex-1">
+                <div className="p-4 flex flex-col flex-1 justify-between">
                   <div>
                     <h3 className="text-lg font-semibold">{project.title}</h3>
-                    <p className="text-gray-600 text-sm mt-1 line-clamp-3">
+                    <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                       {project.description}
                     </p>
                     {project.tags && (
@@ -145,12 +159,12 @@ const HomeProjects = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* View All Projects Button */}
+        {/* View All Projects */}
         {projects.length > 6 && (
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-12">
             <button
               onClick={() => navigate("/projects")}
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition"
+              className="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition transform hover:scale-105"
             >
               View All Projects
             </button>

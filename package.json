@@ -23,7 +23,7 @@
     "class-variance-authority": "^0.7.1",
     "date-fns": "^4.1.0",
     "firebase": "^11.9.1",
-    "framer-motion": "^12.23.16",
+    "framer-motion": "^12.23.22",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.3",
     "jspdf-autotable": "^5.0.2",

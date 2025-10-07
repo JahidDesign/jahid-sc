@@ -1,4 +1,3 @@
-// File: src/components/SkillsCarousel.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,68 +34,76 @@ const SkillsCarousel = () => {
   }, [items]);
 
   if (items.length === 0 || !items[current]) {
-    return <p className="text-center text-gray-500 py-10">No carousel items found.</p>;
+    return (
+      <p className="text-center text-gray-500 py-10 text-lg">
+        No carousel items found.
+      </p>
+    );
   }
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden rounded-lg shadow-lg">
+    <div className="relative w-full h-[520px] md:h-[600px] overflow-hidden rounded-none shadow-sm font-['Poppins'] bg-gray-900">
       <AnimatePresence mode="wait">
         <motion.div
           key={items[current]._id || items[current].id || current}
           className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0, x: 80 }}
+          initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -80 }}
+          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           {/* Background Image */}
           <img
             src={items[current].imageUrl}
             alt={items[current].title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-90"
           />
 
-          {/* Overlay with left-aligned text */}
-          <div className="absolute inset-0  bg-opacity-50 flex items-center">
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-transparent flex items-center">
             <motion.div
               key={items[current].title}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="max-w-xl text-left px-6 md:px-12"
+              className="max-w-xl px-6 md:px-12 text-left"
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">
+              {/* Title with Gradient */}
+              <h2 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-[#00BFFF] to-[#00FFFF] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(0,191,255,0.4)]">
                 {items[current].title}
               </h2>
 
-              {/* Typing Animation */}
+              {/* Typing Animation with Glow */}
               <TypeAnimation
                 sequence={[
-                  "Web Developer 💻",
+                  "MERN Stack Developer ",
                   2000,
-                  "UI/UX Designer 🎨",
+                  "Creative UI/UX Designer ",
                   2000,
-                  "MERN Stack Engineer 🚀",
+                  "Digital Marketer ",
                   2000,
-                  "Freelancer 🌍",
+                  "Freelancer & Innovator ",
                   2000,
                 ]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
-                className="block text-lg md:text-2xl font-medium text-blue-400 mb-6"
+                className="block text-xl md:text-2xl font-semibold text-[#00E5FF] mb-6 drop-shadow-[0_0_10px_rgba(0,229,255,0.7)]"
               />
 
-              <p className="text-lg text-gray-200 mb-6 leading-relaxed">
-                {items[current].subtitle}
+              {/* Description */}
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-6">
+                {items[current].subtitle ||
+                  "Professional web developer passionate about creating modern, user-friendly, and scalable digital experiences."}
               </p>
 
+              {/* Button */}
               {items[current].buttonText && items[current].pagePath && (
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(0,191,255,0.6)" }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => navigate(items[current].pagePath)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg"
+                  className="bg-gradient-to-r from-[#00BFFF] to-[#00FFFF] text-black px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 hover:shadow-lg"
                 >
                   {items[current].buttonText}
                 </motion.button>
@@ -107,13 +114,15 @@ const SkillsCarousel = () => {
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-4 w-full flex justify-center gap-2">
+      <div className="absolute bottom-6 w-full flex justify-center gap-2">
         {items.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              idx === current ? "bg-white scale-110" : "bg-gray-400"
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              idx === current
+                ? "bg-gradient-to-r from-[#00BFFF] to-[#00FFFF] scale-125 shadow-[0_0_6px_rgba(0,191,255,0.8)]"
+                : "bg-white/40 hover:bg-white/70"
             }`}
           />
         ))}
