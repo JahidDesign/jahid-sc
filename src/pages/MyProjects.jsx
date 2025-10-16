@@ -3,7 +3,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Projects from "./Projects";
 import { motion } from "framer-motion";
-import ServicePackagesForm from "./services/ServicePackagesForm.jsx";
 import ProjectsCarousel from "./Hero/ProjectsCarousel.jsx";
 
 const MyProjects = () => {
@@ -76,7 +75,7 @@ const MyProjects = () => {
           transition={{ duration: 1.2 }}
           className="item-center"
         >
-          <ServicePackagesForm />
+  
         </motion.div>
       </div>
     </section>

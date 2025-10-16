@@ -50,10 +50,10 @@ const ReviewsCarouselLightBlue = () => {
       {/* Heading */}
       <div className="relative z-10 max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-blue-900">
-          What Our Customers Say
+          What my Customers Say
         </h2>
         <p className="text-blue-700 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-          Trusted by clients worldwide. See why our customers love our services!
+          Trusted by clients worldwide. See why my customers love my services!
         </p>
       </div>
 

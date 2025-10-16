@@ -9,7 +9,7 @@ import Testimonials from "./Testimonials";
 import SkillsSection from "./SkillsSection";
 import AboutMe from "./About/AboutMe";
 import Subscribers from "./Subscribers";
-// import PricingPlans from "./services/PricingPlans";
+import ServicePackagesForm from "./services/ServicePackagesForm.jsx";
 import ServicesCards from "./services/ServicesCards";
 import ReviewsCarouselModern from "./ReviewsCarouselModern";
 import CustomLoader from "../components/CustomLoader";
@@ -128,6 +128,17 @@ const Home = () => {
       </div>
       </motion.section>
       
+      {/* Testimonials */}
+      <motion.section
+        id="testimonials"
+        className="bg-gray-50 py-20 px-6 md:px-12"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+        custom={5}
+      >
+        <ServicePackagesForm />
+      </motion.section>
       {/* Testimonials */}
       <motion.section
         id="testimonials"
