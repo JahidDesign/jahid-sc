@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const ServicesCards = () => {
@@ -10,7 +9,6 @@ const ServicesCards = () => {
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const navigate = useNavigate();
   const cardsPerPage = 3;
 
   const fetchServices = async () => {
@@ -41,7 +39,7 @@ const ServicesCards = () => {
     }
   };
 
-  // Pagination
+  // Pagination logic
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = filteredServices.slice(indexOfFirstCard, indexOfLastCard);
@@ -151,12 +149,6 @@ const ServicesCards = () => {
                   <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
                   <p className="text-gray-600 mt-2 flex-1">{service.description.slice(0, 80)}...</p>
                   <p className="text-gray-500 mt-2 text-sm font-medium">By: {service.name}</p>
-                  <button
-                    onClick={() => navigate(`/service/${service._id}`)}
-                    className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-                  >
-                    Details
-                  </button>
                 </div>
               </motion.div>
             ))}
